@@ -46,6 +46,7 @@ fn build_scores_table(results: String) -> HashMap<String, Team> {
             team1.goals_scored += team_1_score;
             team1.goals_conceded += team_2_score;
         }
+
         let team2 = scores.get_mut(&team_2_name);
         if team2.is_none() {
             scores.insert(team_2_name, Team{goals_conceded: team_1_score, goals_scored: team_2_score});
